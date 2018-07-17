@@ -1,0 +1,33 @@
+plugins {
+    id "org.springframework.boot" version '2.0.3.RELEASE'
+    id "org.jetbrains.kotlin.jvm" version '1.2.51'
+    id "org.jetbrains.kotlin.plugin.spring" version '1.2.51'
+}
+
+apply plugin: 'idea'
+apply plugin: 'kotlin'
+
+repositories {
+    mavenCentral()
+}
+
+bootJar {
+    baseName = 'camunda-gradle-springboot-kotlin-example'
+    version = '1.0-SNAPSHOT'
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
+
+compileTestKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
+
+dependencies {
+    compile 'org.camunda.bpm.springboot:camunda-bpm-spring-boot-starter-webapp:3.0.0' // for camunda engine 7.9
+    compile 'org.springframework:spring-tx:5.0.6.RELEASE' // overwrite spring-tx 3.x which prevents engine from starting
+    compile 'com.h2database:h2:1.3.176'
+    compile 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.2.51'
+    compile 'org.jetbrains.kotlin:kotlin-reflect:1.2.51' // to prevent NoClassDefFound
+}
