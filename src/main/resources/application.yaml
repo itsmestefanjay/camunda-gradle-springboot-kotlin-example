@@ -1,9 +1,13 @@
 spring.application.name: simpleApplication
-spring:
-  datasource:
-    url: jdbc:h2:mem:example-simple;MODE=Oracle;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
 camunda:
   bpm:
+    datasource:
+      jdbcUrl: jdbc:h2:mem:camundaDB;MODE=Oracle;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+      driverClassName: org.h2.Driver
+      platform: h2
+      username: sa
+      password: sa
+      schema-update: true
     application:
       delete-upon-undeploy: false
       scan-for-process-definitions: false
