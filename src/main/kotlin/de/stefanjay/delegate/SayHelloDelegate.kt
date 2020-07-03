@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018  Stefan Schultz
+ * Copyright (C) 2020  Stefan Schultz
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -28,6 +28,6 @@ class SayHelloDelegate : JavaDelegate {
     private val logger = LoggerFactory.getLogger(SayHelloDelegate::class.java)
 
     override fun execute(execution: DelegateExecution?) {
-        logger.info("hello {}", execution)
+        logger.info("hello {}", execution?.processInstanceId)
     }
 }
