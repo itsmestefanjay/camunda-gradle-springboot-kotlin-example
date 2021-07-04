@@ -5,6 +5,11 @@ This project builds a springboot application based on kotlin with an embedded ca
 * the process consist of a `timer starter event` which triggers every 10s and a `service task`
 * the `service task` calls a Kotlin impl of a `JavaDelegate` which logs some output
 
+## Dependencies
+* Kotlin 1.5.+
+* Springboot 2.4.+
+* Camunda 7.15
+
 ## Plugins
 * the plugin `org.jetbrains.kotlin.plugin.spring` is a wrapper on top of all-open, and it behaves exactly the same way
 
