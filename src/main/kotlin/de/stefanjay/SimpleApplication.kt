@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018  Stefan Schultz
+ * Copyright (C) 2021  Stefan Schultz
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -19,8 +19,10 @@ package de.stefanjay
 
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
+import org.springframework.context.annotation.Import
 
 @SpringBootApplication
+@Import(CamundaConfig::class)
 class Application
 
 fun main(args: Array<String>) {
