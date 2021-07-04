@@ -17,14 +17,14 @@
 
 package de.stefanjay
 
-import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
+import org.springframework.boot.runApplication
 import org.springframework.context.annotation.Import
 
 @SpringBootApplication
 @Import(CamundaConfig::class)
-class Application
+class ProcessApplication
 
 fun main(args: Array<String>) {
-    SpringApplication.run(Application::class.java, *args)
+    runApplication<ProcessApplication>(*args)
 }
