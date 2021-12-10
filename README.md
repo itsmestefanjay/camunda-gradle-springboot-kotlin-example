@@ -7,8 +7,8 @@ This project builds a springboot application based on kotlin with an embedded ca
 
 ## Dependencies
 * Kotlin 1.5.+
-* Springboot 2.4.+
-* Camunda 7.15
+* Springboot 2.5.+
+* Camunda 7.16
 
 ## Plugins
 * the plugin `org.jetbrains.kotlin.plugin.spring` is a wrapper on top of all-open, and it behaves exactly the same way
