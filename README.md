@@ -6,7 +6,7 @@ This project builds a springboot application based on kotlin with an embedded ca
 * the `service task` calls a Kotlin impl of a `JavaDelegate` which logs some output
 
 ## Dependencies
-* Kotlin 1.5.+
+* Kotlin 1.6.+
 * Springboot 2.5.+
 * Camunda 7.16
 
